@@ -1,0 +1,26 @@
+#!/bin/sh
+set -eu
+
+if [ "$#" -lt 2 ] || [ "$#" -gt 3 ]; then
+  echo "usage: one-on-one-release-bundle <shared-document> <transcript> [approved-note]" >&2
+  exit 2
+fi
+
+for input in "$@"; do
+  if [ ! -f "$input" ] || [ ! -r "$input" ]; then
+    echo "not a readable file: $input" >&2
+    exit 1
+  fi
+done
+
+umask 077
+bundle=$(mktemp -d "${TMPDIR:-/tmp}/one-on-one-release.XXXXXX")
+
+cp "$1" "$bundle/shared-document.md"
+cp "$2" "$bundle/transcript.txt"
+
+if [ "$#" -eq 3 ]; then
+  cp "$3" "$bundle/manager-approved-note.md"
+fi
+
+printf '%s\n' "$bundle"

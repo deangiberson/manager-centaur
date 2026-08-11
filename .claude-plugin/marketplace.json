@@ -1,0 +1,15 @@
+{
+  "name": "manager-centaur",
+  "owner": {
+    "name": "Dean Giberson",
+    "email": "dean@deangiberson.com"
+  },
+  "description": "Focused skills that automate administrative management work while keeping human judgment with the manager.",
+  "plugins": [
+    {
+      "name": "one-on-ones",
+      "source": "./plugins/one-on-ones",
+      "description": "Prepare, debrief, and publish manager one-on-ones with a structural boundary between private context and shared notes."
+    }
+  ]
+}

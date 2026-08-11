@@ -1,0 +1,18 @@
+{
+  "name": "one-on-ones",
+  "displayName": "One-on-Ones",
+  "version": "0.1.0",
+  "description": "Prepare, debrief, and publish manager one-on-ones while isolating private context from shared notes.",
+  "author": {
+    "name": "Dean Giberson",
+    "email": "dean@deangiberson.com"
+  },
+  "homepage": "https://github.com/deangiberson/manager-centaur",
+  "repository": "https://github.com/deangiberson/manager-centaur",
+  "license": "MIT",
+  "keywords": [
+    "management",
+    "one-on-ones",
+    "meeting-preparation"
+  ]
+}
